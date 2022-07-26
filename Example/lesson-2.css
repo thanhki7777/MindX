@@ -1,0 +1,14 @@
+body{
+    text-align: center;
+}
+h1{
+    margin-left: 200px;
+}
+.hello{
+   font-size: 40px;
+   font-weight: 900;
+   font-family: 'Times New Roman', Times, serif;
+}
+p{
+    font-size: 1.5rem;
+}
