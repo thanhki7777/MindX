@@ -1,0 +1,70 @@
+b{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 40px;
+}
+p{
+    color: white;
+
+}
+#first{
+    border: 0;
+    width: 100%;
+    
+}
+li{
+    font-family: 'Times New Roman', Times, serif;
+}
+#table1{
+    margin-top: 0px;
+}
+#footer{
+    background-color: rgb(76, 175, 80);
+    height: 60px;
+}
+#footer2{
+    background-color: black;
+}
+
+.header{
+    background-color: rgb(76, 175, 80);
+    width: auto;
+    height: fit-content;
+    margin-right: 0px;
+}
+.menu1{
+    text-align: center;
+    background-color: black;
+    width: auto;
+    height: 140px;
+    margin-top: 0px;
+    padding: 5rem;
+    font-size: 30px;
+}
+.menu2{
+    text-align: center;
+    background-color: black;
+    width: auto;
+    height: 200px;
+    margin-top: 1px;
+    padding-top: 20px;
+}
+.menu2in{
+    text-align: center;
+    background-color: gainsboro;
+    width: auto;
+    height: 200px;
+    margin-top: 0px;
+    padding-top: 20px;
+}
+.menu3{
+    text-align: center;
+    background-color: black;
+    margin-top: 0px; 
+}
+.menu4{
+    text-align: center;
+    background-color: gainsboro;
+    margin-top: 0px; 
+    width: auto;
+    height: 200px;
+}
