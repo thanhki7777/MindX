@@ -74,23 +74,23 @@
 //   console.log(keyarray);
 
 //3.Tạo một object mới có tên family và sử dụng Object myFamily như là prototype của object đó
-let myFamily = {
-  quantity: 4,
-  member: ["Dad", "Mom", "Me", "Daughter"],
-	location: "Vietnam",
-};
-let family = {
+// let myFamily = {
+//   quantity: 4,
+//   member: ["Dad", "Mom", "Me", "Daughter"],
+// 	location: "Vietnam",
+// };
+// let family = {
   
-}
+// }
 
 //4.Thay đổi giá trị 6 bằng 606 bằng 2 cách
-let obj = {
-  foo: { a: "hello", b: "world" },
-  bar: ["example", "mem", null, { xyz: 6 }, 88],
-  qux: [4, 8, 12]
-};
-obj.bar[3].xyz=606;
-console.log(obj.bar[3].xyz);
+// let obj = {
+//   foo: { a: "hello", b: "world" },
+//   bar: ["example", "mem", null, { xyz: 6 }, 88],
+//   qux: [4, 8, 12]
+// };
+// obj.bar[3].xyz=606;
+// console.log(obj.bar[3].xyz);
 
 
 
@@ -107,15 +107,25 @@ console.log(obj.bar[3].xyz);
 //     height:1700,
 //     weight:68
 //   }
+// }
 
+// function getKeys(object,results = []){
+//   let keys = results;
+//   for(let key in object){
+//       keys.push(key);
+//       if(typeof object[key] !== 'object'){
+//         getKeys(object[key],keys);
+//       }
+//   }
+//   return keys;
 // }
-// for(var key in user){
-//   console.log(key);
-// }
+// console.log('keys',getKeys(user));
 
 //Bài tập thêm 2:
- let index = [[21,4,5,-1],3,99];
- index[1].push(99);
- index.pop(3);
- index.pop(99);
- console.log(index);
+ let array = [13,15,17,19];
+ 
+ function insertElement(array,index,element){
+   array.splice(index,2,element);
+   return array;
+ }
+ console.log(insertElement(array,1,14));
