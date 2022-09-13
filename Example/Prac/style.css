@@ -1,0 +1,65 @@
+body{
+    background-color: #14c54e;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+h2{
+    font-weight: bold;
+}
+p{
+    font-style: italic;
+    color: gray;
+}
+.todo-list{
+    background-color: white;
+    border-radius: 15px;
+    padding: 15px;
+    margin: 50px;
+}
+#btn-add{
+    background-color:cornflowerblue;
+    border-radius: 15px;
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: 0px;
+}
+.list-btn{
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+#clear-btn{
+    border-radius: 15px;
+    border: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: cornflowerblue;
+    color: white;
+}
+#empty-btn{
+    border-radius: 15px;
+    border: 0px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: #de3030;
+    font-size: 13px;
+    color: white;
+}
+#save-btn{
+    border-radius: 15px;
+    border: 0px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color:  #14c54e;
+    font-size: 13px;
+    color: white;
+}
+.todo-list #btn-add:hover{
+    cursor: pointer;
+    opacity: 0.75;
+}

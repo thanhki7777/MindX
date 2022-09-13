@@ -1,0 +1,34 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#nav{
+    background-color: aliceblue;
+    width: 100%;
+    height: 200px;
+    margin: 0;
+}
+#nav-ul{
+    list-style: none;
+}
+#nav-ul li{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+    align-items: center;
+}
+#content-ul li{
+    display: flex;
+    justify-content: space-between;
+}
+#delete{
+    color: white;
+    background-color: blueviolet;
+}
+#btn-add{
+    color: white;
+    background-color: blueviolet;
+    padding-left: 0px;
+}
+#footer{
+    text-align: center;
+}

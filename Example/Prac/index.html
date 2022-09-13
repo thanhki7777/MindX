@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="todo-list">
+        <h2>My to-do list</h2>
+        <p>Nhấp đúng vào todo item để đánh dấu đã hoàn thành (completed)</p>
+        <form action="">
+            <input type="text" id="todo-entry-box">
+            <span><button id="btn-add" onclick="">Add</button></span>
+        </form>
+        <br>
+        <ol id="list-todo">
+        </ol>
+        
+        <div class="list-btn">
+            <button id="clear-btn"> Clear Completed</button>
+            <button id="empty-btn">Empty List</button>
+            <button id="save-btn">Save List</button>
+        </div>
+    </div>
+</body>
+<script src="index.js"></script>
+</html>

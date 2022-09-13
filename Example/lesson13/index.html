@@ -1,0 +1,30 @@
+<html>
+
+<head>
+    <title>JavaScript to do list</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="todo-wrapper">
+        <h2>My to-do list</h2>
+        <p>Nhấp đúng vào todo item để đánh dấu đã hoàn thành (completed)</p>
+        <form name="todo-adder">
+            <input type="text" id="todo-entry-box" />
+        </form>
+        <button id="add-button" class="pretty-button">Add</button>
+        <br />
+        <ol id="todo-list">
+        </ol>
+        <div id="control-wrapper">
+            <button id="clear-completed-button" class="pretty-button" onclick="clearCompletedToDoItems()">Clear Completed</button>
+            <button id="empty-button" class="pretty-button" onclick="emptyList()">Empty List</button>
+            <button id="save-button" class="pretty-button" onclick="saveList()">Save List</button>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
