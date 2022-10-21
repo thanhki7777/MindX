@@ -1,0 +1,21 @@
+.item{
+  display: inline-flex;
+  gap: 20px;
+  justify-content: center;
+  
+  
+
+  
+}
+.imgs{
+    width: 30px;
+    height: auto;
+}
+.title{
+    padding-top: 300px;
+   
+}
+.imgs:hover{
+    transform: scale(1.05);
+    transition: 1s;
+}
