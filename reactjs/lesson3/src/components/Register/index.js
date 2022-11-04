@@ -16,6 +16,36 @@ function Register() {
             setPasswordConfirm('Both passwords are not similar')
         }
     },[password])
+
+    const onchangeInput = (nameInput,value) => {
+      const errorMessage = {
+        ...this.state.errorMessage,
+      }
+      const nameRegex = /^[a-zA-Z\-]+$/;
+      const validFullname = nameRegex.test(fullname)
+      if(validFullname === false){
+        errorMessage['fullname'] = "Your fullname or username is not valid"
+      }else{
+        errorMessage['fullname'] = "" 
+      }  
+      const validUsername = nameRegex.test(username)
+      if(validUsername === false){
+        errorMessage['username'] = "Your username or username is not valid"
+      }else{
+        errorMessage['username'] = ""
+      }
+      if (nameInput === "confirm" && password !== value) {
+        errorMessage['confirm'] = "Password is not the same";
+      } else {
+        errorMessage['confirm'] = "";
+      }
+      // this.setState({
+      //   ...this.state,
+      //   [nameInput]: value,
+      //   errorMessage: errorMessage,
+      // })
+      console.log(value);
+    }
     const handleSubmitForm = (e) => {
         e.preventDefault();
         const newUser = {
@@ -36,17 +66,18 @@ function Register() {
             <form className='infoform' onSubmit={handleSubmitForm}>
       <div>
         <label>Fullname:</label>
-        <input type='text' name='fullname' onChange={(e) =>{setFullname(e.target.value)}}/>
-        {fullname.length>6?setErrorMessage('The character length must be longer than words'):<></>}</div>
+        <input type='text' name='fullname' onChange={(e) =>{this.onchangeInput("fullname",e.target.value)}}/>
+        <p>{errorMessage.fullname}</p></div>
      <div>
        <label>Username</label>
-       <input type='text' name='username' onChange={(e) =>{setUsername(e.target.value)}}/></div>
+       <input type='text' name='username' onChange={(e) =>{this.onchangeInput("username",e.target.value)}}/>
+       <p>{errorMessage.username}</p></div>
       <div>
         <label>password:</label>
-        <input type='text' name='password' onChange={(e) =>{setPassword(e.target.value)}}/></div>
+        <input type='text' name='password' onChange={(e) =>{this.onchangeInput("password",e.target.value)}}/></div>
       <div>
         <label>Confirm password:</label>
-        <input type='text' name='passwordConfirm' onChange={(e) =>{setPasswordConfirm(e.target.value)}}/>
+        <input type='text' name='passwordConfirm' onChange={(e) =>{this.onchangeInput("confirm",e.target.value)}}/>
         </div>
       <div>
         <input type='submit'/></div>
