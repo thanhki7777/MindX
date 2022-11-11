@@ -6,16 +6,11 @@ function Register() {
     const[password,setPassword] = useState('')
     const[passwordConfirm,setPasswordConfirm] = useState('')
     const[errorMessage,setErrorMessage] = useState({
-        fullname:'',
-        username:'',
-        password:'',
-        passwordConfirm:'',
+        fullnameM:'',
+        usernameM:'',
+        passwordM:'',
+        passwordConfirmM:'',
     })
-    useEffect(() => {
-        if(password != passwordConfirm){
-            setPasswordConfirm('Both passwords are not similar')
-        }
-    },[password])
 
     const onchangeInput = (nameInput,value) => {
       const errorMessage = {
@@ -23,6 +18,9 @@ function Register() {
       }
       const nameRegex = /^[a-zA-Z\-]+$/;
       const validFullname = nameRegex.test(fullname)
+      if(nameInput == 'username'){
+        this.checkUsernameExist(value)
+      }
       if(validFullname === false){
         errorMessage['fullname'] = "Your fullname or username is not valid"
       }else{
@@ -45,6 +43,33 @@ function Register() {
       //   errorMessage: errorMessage,
       // })
       console.log(value);
+    }
+    const checkUsernameExist = (valueInput) => {
+      fetch(`https://635d3184cb6cf98e56af2894.mockapi.io/api/v1/users?username=${valueInput}`, {
+        method: "GET"
+      }).then((response) => response.json()).then((users) => {
+        if (users.filter((user) =>
+          user.username == valueInput
+        ).length > 0) {
+          this.setState({
+            ...this.state,
+            errorMessage: {
+              ...this.state.errorMessage,
+              usernameM: "Username da ton tai",
+            },
+          })
+        } else {
+          this.setState({
+            ...this.state,
+            errorMessage: {
+              ...this.state.errorMessage,
+              usernameM: "",
+            },
+          })
+        }
+      }).catch((error) => {
+        console.log(error);
+      });
     }
     const handleSubmitForm = (e) => {
         e.preventDefault();
