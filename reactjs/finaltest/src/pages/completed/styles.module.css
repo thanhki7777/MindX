@@ -1,0 +1,55 @@
+.body{
+    text-align: center;
+}
+
+.input{
+    width: 260px;
+    height: 30px;
+    border: 2px solid rgb(195, 185, 185);
+    border-radius: 5px;
+}
+
+.button{
+    width: 60px;
+    height: 36px;
+    background-color: blue;
+    color: white;
+    border: 2px solid rgb(52, 39, 172);
+    border-radius: 6px;
+    margin-left: 15px;
+}
+
+.list{
+    list-style-type: none;
+    font-size: large;
+    margin-right: 305px;
+}
+
+.box{
+    display: inline-block;
+}
+
+.checkbox{
+    size: 15pt;
+}
+
+.clear{
+    width: 100px;
+    height: 30px;
+    background-color: red;
+    color: white;
+    border: 2px solid red;
+    border-radius: 6px;
+    margin-left: 295px;
+    margin-top: 55px;
+}
+
+.delete{
+    width: 60px;
+    height: 20px;
+    background-color: red;
+    color: white;
+    border: 2px solid red;
+    border-radius: 6px;
+    margin-left: 55px;
+}
